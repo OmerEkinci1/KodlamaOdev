@@ -1,0 +1,64 @@
+package Concrete;
+
+import java.util.ArrayList;
+
+import Abstract.UserCheckService;
+import Entities.User;
+
+public class UserManager implements UserService {
+	
+	private UserCheckService userCheckService;
+	private List<User> users = new ArrayList()<User>();
+	
+	public UserManager(UserCheckService userCheckService) {
+		this.userCheckService = userCheckService;
+	}
+
+	@Override
+	public void add(User user) {
+		if (this.userCheckService.checkIfRealPerson(user)) {
+			this.users.add(user);
+			System.out.println(user.getFirstName() + " User added!");
+		}else {
+			System.err.println("Your are not real user!");
+		}	
+	}
+
+	@Override
+	public void update(User user) {
+		if (this.userCheckService.checkIfRealPerson(user)) {
+			boolean isData=false;
+			int index = 0;
+			for (int i=0; i<this.users.size();i++) {
+				User user1 = this.users.get(i);
+				if (user.getId()==user1.getId()) {
+					index = i;
+					isData=true;
+					break;
+				}
+			}
+			if (isData) {
+				this.users.set(index, user);
+				System.out.println(user.getFirstName() + " user updated!");
+			}else {			
+				System.err.println("Data not found!");
+			}
+		}else {
+			System.err.println("You are not real customer.Take care your information again.!");
+		}	
+		
+	}
+
+	@Override
+	public void delete(UserManager user) {
+		this.users.remove(user);
+		System.out.println(user.getFirstName() + " customer deleted!");
+	}
+
+	@Override
+	public void getAll() {
+		for (User user4 : users) {
+			System.out.println( "Id : " + user4.getId() +" Name : " +user4.getFirstName() + " Surname : " + user4.getLastName() + " Nationality Id : " + user4.getNationaltyId() +  " Born Date : "+ user4.getDateOfBirth() );
+		}
+	}
+}

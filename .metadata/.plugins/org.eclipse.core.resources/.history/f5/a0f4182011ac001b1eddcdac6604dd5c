@@ -1,0 +1,23 @@
+package Adapters;
+
+public class EDevletAdapter implements ValidationService {
+	
+	@Override
+	public boolean Validate(Gamer gamer){
+		KPSPublicSoapProxy client = new KPSPublicSoapProxy();
+		try {
+			return client.TCKimlikNoDogrula(Long.parseLong(gamer.getNationalityId()),
+					gamer.getFirstName().toUpperCase(),
+					gamer.getFirstName().toLowerCase(),
+					gamer.getDateOfBirth().getYear());
+		} catch (NumberFormatException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return false;
+		
+	}
+}	

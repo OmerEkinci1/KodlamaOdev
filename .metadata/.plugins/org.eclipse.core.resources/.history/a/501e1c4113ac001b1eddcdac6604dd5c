@@ -1,0 +1,11 @@
+package Abstract;
+
+import Entities.Sell;
+import Entities.User;
+import Entities.Campaign;
+
+public interface SellService {
+	void sell(Sell sell, User user, Campaign campaign);
+	void add(Sell sell);
+	void getall();
+}	

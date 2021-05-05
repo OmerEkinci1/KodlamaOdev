@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+D:\Desktop\Projects\java\KodlamaioOdev3\.metadata\.plugins\org.eclipse.jdt.core
+2582633730.index
+3299728014.index

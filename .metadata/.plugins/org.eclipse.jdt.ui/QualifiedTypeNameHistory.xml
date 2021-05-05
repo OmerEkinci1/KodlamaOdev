@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="Abstract.Entity"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="Abstract.EntityObject"/>
+    <fullyQualifiedTypeName name="Core.Entity"/>
+    <fullyQualifiedTypeName name="Core.EntityRepositoryBase"/>
+    <fullyQualifiedTypeName name="Entities.Sell"/>
+    <fullyQualifiedTypeName name="Entities.Campaign"/>
+    <fullyQualifiedTypeName name="Adapters.ValidationService"/>
+    <fullyQualifiedTypeName name="Concrete.UserManager"/>
+    <fullyQualifiedTypeName name="Abstract.UserCheckService"/>
+    <fullyQualifiedTypeName name="Abstract.UserService"/>
+    <fullyQualifiedTypeName name="Abstract.GameService"/>
+    <fullyQualifiedTypeName name="Abstract.SellService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="Entities.Game"/>
+    <fullyQualifiedTypeName name="Entities.User"/>
+    <fullyQualifiedTypeName name="tr.gov.nvi.tckimlik.WS.KPSPublicSoapProxy"/>
+    <fullyQualifiedTypeName name="java.rmi.RemoteException"/>
+</qualifiedTypeNameHistroy>
